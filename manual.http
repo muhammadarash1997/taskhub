@@ -1,0 +1,78 @@
+### Register
+
+POST http://localhost:8080/api/users
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username" : "elon",
+  "password" : "rahasia",
+  "name" : "Elon Musk"
+}
+
+### Login
+
+POST http://localhost:8080/api/auth/login
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username": "elon",
+  "password": "rahasia"
+}
+
+### Get User
+GET http://localhost:8080/api/users/current
+Accept: application/json
+X-API-TOKEN: 53c9e04e-3aea-44a7-b185-52faa0329239
+
+
+### Update User
+PATCH http://localhost:8080/api/users/current
+Accept: application/json
+Content-Type: application/json
+X-API-TOKEN: 53c9e04e-3aea-44a7-b185-52faa0329239
+
+{
+  "name" : "Elon Musk"
+}
+
+### Create Task
+POST http://localhost:8080/api/tasks
+Accept: application/json
+Content-Type: application/json
+X-API-TOKEN: 53c9e04e-3aea-44a7-b185-52faa0329239
+
+{
+  "title" : "Make Jurnal",
+  "description" : "Make a jurnal 3 page",
+  "status" : "pending"
+}
+
+### Search Task
+GET http://localhost:8080/api/tasks
+Accept: application/json
+X-API-TOKEN: 53c9e04e-3aea-44a7-b185-52faa0329239
+
+### Get Task
+GET http://localhost:8080/api/tasks/faddc830-bf3c-4009-ace8-a8526db51051
+Accept: application/json
+X-API-TOKEN: 53c9e04e-3aea-44a7-b185-52faa0329239
+
+
+### Update Task
+PUT http://localhost:8080/api/tasks/faddc830-bf3c-4009-ace8-a8526db51051
+Accept: application/json
+Content-Type: application/json
+X-API-TOKEN: 53c9e04e-3aea-44a7-b185-52faa0329239
+
+{
+  "title" : "Make Jurnal",
+  "description" : "Make a jurnal 3 page",
+  "status" : "complete"
+}
+
+### Remove Task
+DELETE http://localhost:8080/api/tasks/a2875abf-8a31-4b90-972d-1de67dbc1351
+Accept: application/json
+X-API-TOKEN: 53c9e04e-3aea-44a7-b185-52faa0329239
